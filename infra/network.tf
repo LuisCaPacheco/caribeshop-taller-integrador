@@ -60,6 +60,19 @@ resource "azurerm_network_security_group" "app" {
   }
 
   security_rule {
+    name                       = "Allow-SSH-Internet"
+    description                = "Acceso SSH directo para soporte"
+    priority                   = 120
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "22"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  security_rule {
     name                       = "Deny-All-Inbound"
     description                = "Todo lo demás (incl. 22/3389 y tráfico lateral de la VNet) denegado"
     priority                   = 4096
