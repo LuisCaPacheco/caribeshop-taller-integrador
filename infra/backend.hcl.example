@@ -1,0 +1,5 @@
+# Copiar a backend.hcl (ignorado por Git) con los valores que imprime bootstrap-backend.sh
+resource_group_name  = "rg-caribeshop-tfstate"
+storage_account_name = "stcstfstateXXXXXX"
+container_name       = "tfstate"
+key                  = "caribeshop/prod.tfstate"

@@ -1,0 +1,23 @@
+RG=rg-caribeshop-prod  VMSS=vmss-caribeshop-app  KV=kv-caribeshop-s8pup
+APP_URL=http://caribeshop-s8pup.centralus.cloudapp.azure.com
+>> 2026-11-23T20:28:35.081Z eliminando instancia 6 (vmss-caribeshop-app000006) sin drenar
+>> Esperando recuperación de la capacidad mínima (autoscale min=2 crea una instancia nueva)
+20:28:39 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:28:56 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:13 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:30 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:47 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:05 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:22 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:39 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=2
+2026-11-23T20:30:39Z capacidad mínima recuperada
+
+===== Resumen =====
+ventana: 2026-11-23T20:28:35.613+00:00 -> 2026-11-23T20:31:39.710+00:00
+peticiones: 187  errores: 2  % error: 1.07 %
+primer error: 2026-11-23T20:28:38.690+00:00  �ltimo error: 2026-11-23T20:28:42.191+00:00
+instancias vistas (primera / �ltima respuesta):
+  vmss-caribeshop-app000007 2026-11-23T20:28:35.613+00:00  ->  2026-11-23T20:31:37.924+00:00
+  vmss-caribeshop-app000006 2026-11-23T20:28:37.908+00:00  ->  2026-11-23T20:28:37.908+00:00
+  vmss-caribeshop-app000008 2026-11-23T20:30:35.515+00:00  ->  2026-11-23T20:31:39.710+00:00
+Tiempo de recuperación = segunda línea de C:/Users/Fundasaberes/Desktop/proyectos luis/session_claude/caribeshop-taller-integrador/evidencias/p2-falla-abrupta-tiempos.txt - 2026-11-23T20:28:35.081Z

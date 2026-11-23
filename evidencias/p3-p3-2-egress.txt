@@ -1,0 +1,12 @@
+Enable succeeded: 
+[stdout]
+--- Internet arbitrario (debe fallar):
+000
+BLOQUEADO
+--- Key Vault (permitido: cualquier código HTTP = alcanzable):
+200
+--- IMDS (link-local, permitido):
+2
+[stderr]
+curl: (28) Connection timed out after 8001 milliseconds
+

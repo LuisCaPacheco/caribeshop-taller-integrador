@@ -1,0 +1,188 @@
+{
+  "cost": 39,
+  "interval": "PT1M",
+  "namespace": "microsoft.insights/autoscalesettings",
+  "resourceregion": "centralus",
+  "timespan": "2026-11-23T19:15:15Z/2026-11-23T19:55:18Z",
+  "value": [
+    {
+      "displayDescription": "The capacity reported to autoscale when it executed.",
+      "errorCode": "Success",
+      "id": "/subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/microsoft.insights/autoscalesettings/autoscale-caribeshop-app/providers/Microsoft.Insights/metrics/ObservedCapacity",
+      "name": {
+        "localizedValue": "Observed Capacity",
+        "value": "ObservedCapacity"
+      },
+      "resourceGroup": "rg-caribeshop-prod",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:15:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:16:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:17:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:18:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:19:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:20:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:21:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:22:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:23:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:24:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:25:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:26:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:27:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:28:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:29:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:30:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:31:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:32:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:33:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:34:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:35:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:36:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:37:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:38:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:39:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:40:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:41:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:42:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:43:00Z"
+            },
+            {
+              "maximum": 3.0,
+              "timeStamp": "2026-11-23T19:44:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:45:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:46:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:47:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:48:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:49:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:50:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:51:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:52:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:53:00Z"
+            },
+            {
+              "maximum": 2.0,
+              "timeStamp": "2026-11-23T19:54:00Z"
+            }
+          ],
+          "metadatavalues": []
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+20:09:34 3	vmss-caribeshop-app000003	1	Succeeded
+20:09:34 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:10:09 3	vmss-caribeshop-app000003	1	Succeeded
+20:10:09 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:10:44 3	vmss-caribeshop-app000003	1	Succeeded
+20:10:44 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:11:21 3	vmss-caribeshop-app000003	1	Succeeded
+20:11:21 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:11:55 3	vmss-caribeshop-app000003	1	Succeeded
+20:11:55 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:12:13 3	vmss-caribeshop-app000003	1	Succeeded
+20:12:13 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:12:28 3	vmss-caribeshop-app000003	1	Succeeded
+20:12:28 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:12:47 3	vmss-caribeshop-app000003	1	Succeeded
+20:12:47 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:13:02 3	vmss-caribeshop-app000003	1	Succeeded
+20:13:02 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:13:20 3	vmss-caribeshop-app000003	1	Succeeded
+20:13:20 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:13:54 3	vmss-caribeshop-app000003	1	Succeeded
+20:13:54 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:14:28 3	vmss-caribeshop-app000003	1	Succeeded
+20:14:28 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:15:01 3	vmss-caribeshop-app000003	1	Succeeded
+20:15:01 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:15:35 3	vmss-caribeshop-app000003	1	Succeeded
+20:15:35 6	vmss-caribeshop-app000006	2	Succeeded
+AutomaticRepairs	Running
+20:16:09 3	vmss-caribeshop-app000003	1	Deleting
+20:16:09 6	vmss-caribeshop-app000006	2	Succeeded
+20:16:09 7	vmss-caribeshop-app000007	1	Creating
+AutomaticRepairs	Running
+20:16:43 6	vmss-caribeshop-app000006	2	Succeeded
+20:16:43 7	vmss-caribeshop-app000007	1	Creating
+AutomaticRepairs	Running
+20:17:16 6	vmss-caribeshop-app000006	2	Succeeded
+20:17:16 7	vmss-caribeshop-app000007	1	Succeeded
+AutomaticRepairs	Running
+20:17:51 6	vmss-caribeshop-app000006	2	Succeeded
+20:17:51 7	vmss-caribeshop-app000007	1	Succeeded
+AutomaticRepairs	Running
+20:18:24 6	vmss-caribeshop-app000006	2	Succeeded
+20:18:24 7	vmss-caribeshop-app000007	1	Succeeded
+AutomaticRepairs	Running

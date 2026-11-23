@@ -1,0 +1,8 @@
+20:28:39 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:28:56 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:13 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:30 instancias Succeeded=1  hostnames sirviendo (sin la víctima)=1
+20:29:47 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:05 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:22 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=1
+20:30:39 instancias Succeeded=2  hostnames sirviendo (sin la víctima)=2

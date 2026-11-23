@@ -1,0 +1,10 @@
+# Copiar a terraform.tfvars (ignorado por Git) y completar.
+# Obtener su IP pública:  curl -s https://api.ipify.org
+operator_ip = "181.50.10.20"
+alert_email = "equipo@ejemplo.com"
+
+# Opcionales
+# location        = "centralus"
+# vm_size         = "Standard_B2ps_v2"
+# autoscale_max   = 3
+# subscription_id = "00000000-0000-0000-0000-000000000000"

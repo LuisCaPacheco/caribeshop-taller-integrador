@@ -1,0 +1,4 @@
+ERROR: (RequestDisallowedByPolicy) Resource 'pip-fuera-region' was disallowed by policy. Reasons: 'CaribeShop: solo se permite desplegar en la región aprobada.'. See error details for policy resource IDs.
+Code: RequestDisallowedByPolicy
+Message: Resource 'pip-fuera-region' was disallowed by policy. Reasons: 'CaribeShop: solo se permite desplegar en la región aprobada.'. See error details for policy resource IDs.
+Target: pip-fuera-region

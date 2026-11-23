@@ -1,0 +1,6 @@
+2026-11-23T19:30:42Z (durante el pico de P1.2)
+Instancia    Nombre                     Zona    Estado
+-----------  -------------------------  ------  ---------
+3            vmss-caribeshop-app000003  1       Succeeded
+4            vmss-caribeshop-app000004  2       Succeeded
+5            vmss-caribeshop-app000005  2       Succeeded

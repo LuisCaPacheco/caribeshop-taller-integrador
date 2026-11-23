@@ -1,0 +1,8 @@
+
+===== Resumen =====
+ventana: 2026-11-23T20:10:13.118+00:00 -> 2026-11-23T20:13:36.339+00:00
+peticiones: 396  errores: 2  % error: 0.51 %
+primer error: 2026-11-23T20:10:47.287+00:00  último error: 2026-11-23T20:10:47.445+00:00
+instancias vistas (primera / última respuesta):
+  vmss-caribeshop-app000003 2026-11-23T20:10:13.118+00:00  ->  2026-11-23T20:12:15.889+00:00
+  vmss-caribeshop-app000006 2026-11-23T20:10:13.916+00:00  ->  2026-11-23T20:13:36.339+00:00

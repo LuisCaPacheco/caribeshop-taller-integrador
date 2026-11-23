@@ -1,0 +1,30 @@
+== P3.1 - Lectura del secreto desde una red NO autorizada (mismo usuario con rol Key Vault Secrets Officer)
+Usuario: lupacheco@utb.edu.co
+IP pública de origen: <IP-OPERADOR>
+
+== Roles del usuario sobre el Key Vault:
+Key Vault Secrets Officer
+
+== 20:43:18Z Se retira la IP del operador del firewall (la red pasa a ser NO autorizada)
+[]
+
+== 20:44:23Z az keyvault secret show (desde red no autorizada):
+ERROR: (Forbidden) Client address is not authorized and caller is not a trusted service.
+Client address: <IP-OPERADOR>
+Caller: appid=04b07795-8ddb-461a-bbee-02f9e1bf7b46;oid=4238f307-2435-4f14-8a4a-fd07c57c6fee;iss=https://sts.windows.net/<TENANT>/
+Vault: kv-caribeshop-s8pup;location=centralus
+Code: Forbidden
+Message: Client address is not authorized and caller is not a trusted service.
+Client address: <IP-OPERADOR>
+Caller: appid=04b07795-8ddb-461a-bbee-02f9e1bf7b46;oid=4238f307-2435-4f14-8a4a-fd07c57c6fee;iss=https://sts.windows.net/<TENANT>/
+Vault: kv-caribeshop-s8pup;location=centralus
+Inner error: {
+    "code": "ForbiddenByFirewall"
+}
+
+== 20:44:29Z Se restaura la IP del operador
+[
+  {
+    "value": "<IP-OPERADOR>/32"
+  }
+]

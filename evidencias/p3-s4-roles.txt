@@ -1,0 +1,3 @@
+Rol                     Alcance
+----------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Key Vault Secrets User  /subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/Microsoft.KeyVault/vaults/kv-caribeshop-s8pup/secrets/db-password

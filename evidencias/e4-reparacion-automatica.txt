@@ -1,0 +1,9 @@
+Falla lógica inyectada en vmss-caribeshop-app000004 a las 2026-11-23T19:58:47Z (/health -> 503)
+20:01:18 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Succeeded;
+20:01:52 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Succeeded;
+20:02:26 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Succeeded;
+20:03:03 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Succeeded;
+20:03:37 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Succeeded;
+20:04:11 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000004 2 Deleting;vmss-caribeshop-app000006 2 Creating;
+20:04:48 000004 eliminada por la reparación automática
+20:04:50 vmss-caribeshop-app000003 1 Succeeded;vmss-caribeshop-app000006 2 Succeeded;

@@ -1,0 +1,3 @@
+# Solo en la máquina del operador (las instancias no instalan nada)
+locust==2.32.4
+matplotlib==3.9.2

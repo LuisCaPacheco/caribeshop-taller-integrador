@@ -1,0 +1,4 @@
+storage_account_name = "stcaribeshops8pup"
+vmss_id = "/subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/Microsoft.Compute/virtualMachineScaleSets/vmss-caribeshop-app"
+vmss_name = "vmss-caribeshop-app"
+vmss_principal_id = "db6f60b7-7425-4d80-978d-7ee2ce794b7c"

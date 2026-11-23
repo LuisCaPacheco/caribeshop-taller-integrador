@@ -1,0 +1,34 @@
+RG=rg-caribeshop-prod  VMSS=vmss-caribeshop-app  KV=kv-caribeshop-s8pup
+APP_URL=http://caribeshop-s8pup.centralus.cloudapp.azure.com
+>> 1) Carga moderada (40 usuarios, 15 min) en segundo plano
+>> 2) Sonda externa cada 0,5 s en segundo plano
+>> 3) Inyectando falla lógica (2026-11-23T20:12:12.952Z): /health -> 503 durante 15 min en la instancia que atienda
+{"instancia": "vmss-caribeshop-app000003", "health": "503", "segundos": 900, "hasta_epoch": 1795465631.3}
+   instancia enferma: vmss-caribeshop-app000003
+>> 4) Observando 13 min (reparación automática: grace 10 min + reemplazo)
+20:12:13 3	vmss-caribeshop-app000003	1	Succeeded
+20:12:13 6	vmss-caribeshop-app000006	2	Succeeded
+20:12:47 3	vmss-caribeshop-app000003	1	Succeeded
+20:12:47 6	vmss-caribeshop-app000006	2	Succeeded
+20:13:20 3	vmss-caribeshop-app000003	1	Succeeded
+20:13:20 6	vmss-caribeshop-app000006	2	Succeeded
+20:13:54 3	vmss-caribeshop-app000003	1	Succeeded
+20:13:54 6	vmss-caribeshop-app000006	2	Succeeded
+20:14:28 3	vmss-caribeshop-app000003	1	Succeeded
+20:14:28 6	vmss-caribeshop-app000006	2	Succeeded
+20:15:01 3	vmss-caribeshop-app000003	1	Succeeded
+20:15:01 6	vmss-caribeshop-app000006	2	Succeeded
+20:15:35 3	vmss-caribeshop-app000003	1	Succeeded
+20:15:35 6	vmss-caribeshop-app000006	2	Succeeded
+20:16:09 3	vmss-caribeshop-app000003	1	Deleting
+20:16:09 6	vmss-caribeshop-app000006	2	Succeeded
+20:16:09 7	vmss-caribeshop-app000007	1	Creating
+20:16:43 6	vmss-caribeshop-app000006	2	Succeeded
+20:16:43 7	vmss-caribeshop-app000007	1	Creating
+20:17:16 6	vmss-caribeshop-app000006	2	Succeeded
+20:17:16 7	vmss-caribeshop-app000007	1	Succeeded
+20:17:51 6	vmss-caribeshop-app000006	2	Succeeded
+20:17:51 7	vmss-caribeshop-app000007	1	Succeeded
+20:18:24 6	vmss-caribeshop-app000006	2	Succeeded
+20:18:24 7	vmss-caribeshop-app000007	1	Succeeded
+ERROR: HTTPSConnection(host='management.azure.com', port=443): Failed to resolve 'management.azure.com' ([Errno 11001] getaddrinfo failed)

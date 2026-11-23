@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------
+# S1 - Nada de estado, planes, variables reales ni credenciales en Git
+# ---------------------------------------------------------------
+
+# Terraform
+**/.terraform/*
+.terraform.lock.hcl.bak
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+tfplan*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Variables reales (solo se versiona el *.example)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+backend.hcl
+!backend.hcl.example
+
+# Credenciales y llaves
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+*.publishsettings
+.azure/
+azureProfile.json
+credentials.json
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Locust: los reportes que SÍ se entregan van en evidencias/ (se versionan a propósito)
+loadtest/*.csv
+loadtest/*.html
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

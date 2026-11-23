@@ -1,0 +1,4 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,/,RemoteDisconnected('Remote end closed connection without response'),1,2026-11-23T20:28:38Z,2026-11-23T20:28:38Z
+GET,/,"ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)",1,2026-11-23T20:28:38Z,2026-11-23T20:28:38Z
+GET,/work,RemoteDisconnected('Remote end closed connection without response'),1,2026-11-23T20:28:38Z,2026-11-23T20:28:38Z

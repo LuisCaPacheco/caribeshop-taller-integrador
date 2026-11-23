@@ -1,0 +1,4 @@
+ERROR: (RequestDisallowedByPolicy) Resource 'nic-prueba-politica' was disallowed by policy. Reasons: 'CaribeShop: las NICs no pueden tener IP pública. Exponga servicios solo a través del Load Balancer.'. See error details for policy resource IDs.
+Code: RequestDisallowedByPolicy
+Message: Resource 'nic-prueba-politica' was disallowed by policy. Reasons: 'CaribeShop: las NICs no pueden tener IP pública. Exponga servicios solo a través del Load Balancer.'. See error details for policy resource IDs.
+Target: nic-prueba-politica

@@ -1,0 +1,10 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,/,RemoteDisconnected('Remote end closed connection without response'),22,2026-11-23T20:18:45Z,2026-11-23T20:18:46Z
+GET,/work,"ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)",4,2026-11-23T20:18:54Z,2026-11-23T20:18:57Z
+GET,/health,HTTPError('503 Server Error: Service Unavailable for url: /health'),6,2026-11-23T20:12:13Z,2026-11-23T20:12:16Z
+GET,/,"gaierror(11001, 'getaddrinfo failed')",3590,2026-11-23T20:18:57Z,2026-11-23T20:24:34Z
+GET,/,"ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)",2,2026-11-23T20:18:54Z,2026-11-23T20:19:09Z
+GET,/work,"gaierror(11001, 'getaddrinfo failed')",1789,2026-11-23T20:18:57Z,2026-11-23T20:24:34Z
+GET,/health,RemoteDisconnected('Remote end closed connection without response'),3,2026-11-23T20:18:45Z,2026-11-23T20:18:46Z
+GET,/health,"gaierror(11001, 'getaddrinfo failed')",592,2026-11-23T20:19:08Z,2026-11-23T20:24:26Z
+GET,/work,RemoteDisconnected('Remote end closed connection without response'),9,2026-11-23T20:18:45Z,2026-11-23T20:18:46Z
