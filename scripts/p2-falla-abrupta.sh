@@ -8,7 +8,7 @@ OUT="$EVID/p2-falla-abrupta"
 LOAD_PROFILE=moderate USERS=40 DURATION=900 locust -f "$ROOT/loadtest/locustfile.py" --host "$APP_URL" \
   --headless --csv "$OUT" --csv-full-history --html "$OUT.html" > "$OUT-locust.log" 2>&1 &
 LOCUST_PID=$!
-python "$ROOT/scripts/monitor.py" "$APP_URL" "$OUT-monitor.csv" 0.5 > "$OUT-monitor.log" 2>&1 &
+python "$ROOT/scripts/monitor.py" "$APP_URL" "$OUT-monitor.csv" 0.5 1200 > "$OUT-monitor.log" 2>&1 &
 MON_PID=$!
 
 sleep 120

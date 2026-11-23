@@ -12,7 +12,7 @@ LOAD_PROFILE=moderate USERS=40 DURATION=900 locust -f "$ROOT/loadtest/locustfile
 LOCUST_PID=$!
 
 echo ">> 2) Sonda externa cada 0,5 s en segundo plano"
-python "$ROOT/scripts/monitor.py" "$APP_URL" "$OUT-monitor.csv" 0.5 > "$OUT-monitor.log" 2>&1 &
+python "$ROOT/scripts/monitor.py" "$APP_URL" "$OUT-monitor.csv" 0.5 1000 > "$OUT-monitor.log" 2>&1 &
 MON_PID=$!
 
 sleep 120   # 2 min de línea base

@@ -23,7 +23,7 @@ Usar el diagrama Mermaid del `README.md` §1 (exportarlo a PNG con https://merma
 | E3 | `compute.tf`: `azurerm_monitor_autoscale_setting.app` (70/30, PT5M/PT10M), `lifecycle.ignore_changes=[instances]` | Run history + gráfico `p1-escalonada.png` |
 | E4 | `compute.tf`: `automatic_instance_repair` + `health_probe_id` + `upgrade_mode="Rolling"` | Instancia reemplazada en P2.1 (instanceId nuevo + Activity Log) |
 | E5 | `monitoring.tf`: `azurerm_monitor_metric_alert.probe_degraded`, `.cpu_sustained`, `azurerm_monitor_action_group.ops` | Correo recibido / historial de alertas |
-| D1 | `.github/workflows/ci.yml` | Ejecución verde + PR rojo (CKV_AZURE_10) — `docs/PR-DEMO.md` |
+| D1 | `.github/workflows/ci.yml` + protección de `main` (4 checks obligatorios) | PR #1 cerrado: bloqueado por `CKV_AZURE_10` (anexo A9, `evidencias/d1-pr1-checkov-fallo.log`); PR #2 con merge: corrección en verde — github.com/LuisCaPacheco/caribeshop-taller-integrador/pulls?q=is%3Apr |
 | D2 | `#checkov:skip` en `security.tf`, `network.tf`, `compute.tf` | Tabla §5 de este documento |
 | D3 | `infra/templates/cloud-init.yaml.tftpl`, `app/app.py` | Instancias nuevas (scale-out/repair) sirven sin intervención |
 

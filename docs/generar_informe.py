@@ -105,6 +105,7 @@ for f, cap in [
     ("06-autoscale-historial-ejecucion.png", "A6. E3 — Historial de ejecución del autoscale (scale up 14:28, scale down 14:43, hora local)"),
     ("07-sonda-health-probe-status.png", "A7. E2 — Health Probe Status por instancia: 10.20.1.5 cae a 0 % tras la falla lógica"),
     ("08-alertas-disparadas.png", "A8. E5 — Alertas disparadas: sonda < 100 % (Sev1) y denegaciones de Azure Policy"),
+    ("09-pr1-checkov-bloquea.png", "A9. D1 — PR #1 (abría SSH a Internet) bloqueado por el job «checkov (bloqueante)»: CKV_AZURE_10"),
 ]:
     anexos.append(img(EVID / "capturas" / f, cap, "100%"))
 anexos.append(
@@ -123,7 +124,7 @@ portada = """
 <p class="sub">Azure · Terraform · GitHub Actions · Checkov · Locust</p>
 <table class="meta">
 <tr><td>Integrantes</td><td>______________________________<br>______________________________<br>______________________________</td></tr>
-<tr><td>Repositorio</td><td>https://github.com/______/______</td></tr>
+<tr><td>Repositorio</td><td>https://github.com/LuisCaPacheco/caribeshop-taller-integrador</td></tr>
 <tr><td>Video</td><td>https://youtu.be/______</td></tr>
 <tr><td>Fecha</td><td>Noviembre de 2026</td></tr>
 </table>

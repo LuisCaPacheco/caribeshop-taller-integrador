@@ -36,7 +36,7 @@ blockquote { border-left: 3px solid #0b3c5d; margin: 6px 0; padding: 2px 10px; c
 <p class="sub">Azure · Terraform · GitHub Actions · Checkov · Locust</p>
 <table class="meta">
 <tr><td>Integrantes</td><td>______________________________<br>______________________________<br>______________________________</td></tr>
-<tr><td>Repositorio</td><td>https://github.com/______/______</td></tr>
+<tr><td>Repositorio</td><td>https://github.com/LuisCaPacheco/caribeshop-taller-integrador</td></tr>
 <tr><td>Video</td><td>https://youtu.be/______</td></tr>
 <tr><td>Fecha</td><td>Noviembre de 2026</td></tr>
 </table>
@@ -193,8 +193,8 @@ blockquote { border-left: 3px solid #0b3c5d; margin: 6px 0; padding: 2px 10px; c
 </tr>
 <tr>
 <td>D1</td>
-<td><code>.github/workflows/ci.yml</code></td>
-<td>Ejecución verde + PR rojo (CKV_AZURE_10) — <code>docs/PR-DEMO.md</code></td>
+<td><code>.github/workflows/ci.yml</code> + protección de <code>main</code> (4 checks obligatorios)</td>
+<td>PR #1 cerrado: bloqueado por <code>CKV_AZURE_10</code> (anexo A9, <code>evidencias/d1-pr1-checkov-fallo.log</code>); PR #2 con merge: corrección en verde — github.com/LuisCaPacheco/caribeshop-taller-integrador/pulls?q=is%3Apr</td>
 </tr>
 <tr>
 <td>D2</td>
@@ -878,6 +878,8 @@ Otras palancas: <em>savings plan</em>/reservas a 1 año para las 2 instancias ba
 <figure><img src="../evidencias/capturas/07-sonda-health-probe-status.png" style="width:100%"><figcaption>A7. E2 — Health Probe Status por instancia: 10.20.1.5 cae a 0 % tras la falla lógica</figcaption></figure>
 
 <figure><img src="../evidencias/capturas/08-alertas-disparadas.png" style="width:100%"><figcaption>A8. E5 — Alertas disparadas: sonda < 100 % (Sev1) y denegaciones de Azure Policy</figcaption></figure>
+
+<figure><img src="../evidencias/capturas/09-pr1-checkov-bloquea.png" style="width:100%"><figcaption>A9. D1 — PR #1 (abría SSH a Internet) bloqueado por el job «checkov (bloqueante)»: CKV_AZURE_10</figcaption></figure>
 
 <h2>Anexo B. Archivos de evidencia</h2>
 <p>Todos en la carpeta <code>evidencias/</code> del repositorio: reportes HTML y CSV de Locust (<code>p1-capacidad*</code>, <code>p1-escalonada*</code>, <code>p2-falla-logica*</code>, <code>p2-falla-abrupta*</code>), métricas exportadas de Azure Monitor (<code>p1-observed-capacity.json</code>, <code>p1-vmss-cpu.json</code>, <code>p1-lb-dipavailability.json</code>), historial del autoscale, salidas de las pruebas de seguridad (<code>p3-*</code>), reparación automática (<code>e4-reparacion-automatica.txt</code>), alertas (<code>e5-alertas-disparadas.txt</code>) y los registros de <code>terraform apply</code>.</p></div>
