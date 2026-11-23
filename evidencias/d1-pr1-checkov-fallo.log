@@ -1,0 +1,22 @@
+checkov (bloqueante)	checkov -d .	﻿2026-11-23T20:56:42.5834488Z ##[group]Run checkov -d . --framework terraform github_actions secrets --compact --quiet
+^[[36;1mcheckov -d . --framework terraform github_actions secrets --compact --quiet^[[0m
+shell: /usr/bin/bash -e {0}
+env:
+  TF_VERSION: 1.9.8
+  TF_IN_AUTOMATION: true
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+##[endgroup]
+github_actions scan results:
+Passed checks: 84, Failed checks: 0, Skipped checks: 0
+terraform scan results:
+Passed checks: 27, Failed checks: 1, Skipped checks: 11
+Check: CKV_AZURE_10: "Ensure that SSH access is restricted from the internet"
+	FAILED for resource: azurerm_network_security_group.app
+	File: /infra/network.tf:28-114
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-networking-policies/bc-azr-networking-3
+##[error]Process completed with exit code 1.

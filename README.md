@@ -155,7 +155,17 @@ az group delete -n rg-caribeshop-tfstate --yes
 - [x] **D2** Cada `#checkov:skip` con justificación en línea (11 skips, tabla en `docs/INFORME-SOPORTE.md` §5).
 - [x] **D3** cloud-init: escribe la app, el unit de systemd endurecido y la arranca; cero pasos manuales.
 
-## 8. Pruebas y evidencias
+## 8. Acceso de soporte (sin SSH)
+
+Las instancias no tienen IP pública ni el puerto 22 abierto. Para diagnóstico se usa `scripts/soporte-run-command.sh`,
+que ejecuta comandos con `az vmss run-command` (Entra ID + RBAC, auditado en el Activity Log):
+
+```bash
+./scripts/soporte-run-command.sh                 # estado de la app y últimos logs en todas las instancias
+./scripts/soporte-run-command.sh 7 "df -h"        # un comando en la instancia 7
+```
+
+## 9. Pruebas y evidencias
 
 Ver **[docs/GUIA-PRUEBAS.md](docs/GUIA-PRUEBAS.md)**. Resumen:
 
@@ -167,7 +177,7 @@ Ver **[docs/GUIA-PRUEBAS.md](docs/GUIA-PRUEBAS.md)**. Resumen:
 | P2.2 falla abrupta | `scripts/p2-falla-abrupta.sh` | monitor CSV, tiempo de recuperación |
 | P3 seguridad + S2/S4/S5/S6 | `scripts/p3-seguridad.sh` | IPs, NSG, roles, egress, RequestDisallowedByPolicy, KQL |
 
-## 9. DevSecOps
+## 10. DevSecOps
 
 - Proteger `main`: *Settings → Branches → Add rule* → *Require status checks*: `terraform fmt + validate`, `checkov (bloqueante)`, `app + locustfile (sintaxis)`, `gitleaks (historial completo)`.
 - PR que falla a propósito y su corrección: **[docs/PR-DEMO.md](docs/PR-DEMO.md)**.
