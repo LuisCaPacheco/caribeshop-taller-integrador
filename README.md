@@ -1,6 +1,9 @@
 # CaribeShop — Plataforma segura, escalable y altamente disponible en Azure
 
 Taller integrador · Infraestructura para TI · UTB
+
+**Grupo The Odyssey:** Israel Hoyos · Camilo Gómez · Sergio Ortiz · Luis Pacheco
+
 Terraform · GitHub Actions · Checkov · Locust · Azure (VMSS multi-zona, Load Balancer Standard, Key Vault, Azure Policy, Azure Monitor)
 
 ---
@@ -41,7 +44,7 @@ flowchart TB
 | **Rol con alcance al secreto** (no al vault) | S4 más estricto: la identidad del VMSS solo puede `get` sobre `db-password`. |
 | **Secreto generado por Terraform** (`random_password`) | El valor nunca existe en Git ni en variables; solo en el estado remoto cifrado y en Key Vault. |
 | **Rolling upgrade + `health_probe_id`** | Requisito de Azure para reparación automática basada en la sonda del LB (E4) y cambios sin caída. |
-| **Histéresis 70 % / 30 %, cooldown 5 / 10 min** | Ver comentario en `infra/compute.tf` y `docs/INFORME-SOPORTE.md` §3. |
+| **Histéresis 70 % / 30 %, cooldown 5 / 10 min** | Al retirar 1 de N instancias la CPU restante sube ≈ N/(N−1): con 30 % el resultado (≈ 45 % de 3→2) queda lejos de 70 % y no hay oscilación. Detalle en `infra/compute.tf` y en el informe (§2.1). |
 
 ## 2. Estructura del repositorio
 
@@ -66,10 +69,7 @@ flowchart TB
 │   └── bootstrap/bootstrap-backend.sh
 ├── loadtest/locustfile.py          # perfiles step (28 min), capacity, moderate
 ├── scripts/                        # P1, P2, P3 automatizados + monitor + gráficas
-├── docs/
-│   ├── GUIA-PRUEBAS.md             # Fase 4: comandos exactos P1/P2/P3 y KQL
-│   ├── INFORME-SOPORTE.md          # Fase 5: trazabilidad, SLA, riesgos, costos, respuestas, guion
-│   └── PR-DEMO.md                  # cómo crear el PR que falla por seguridad y su corrección
+├── docs/Informe-CaribeShop.pdf     # informe técnico
 └── evidencias/                     # CSV/HTML de Locust, gráficos, salidas de az/KQL
 ```
 
@@ -152,7 +152,7 @@ az group delete -n rg-caribeshop-tfstate --yes
 - [x] **E4** `automatic_instance_repair` (grace 10 min, Replace) ligado a la sonda.
 - [x] **E5** Alertas `DipAvailability < 100 %` y CPU sostenida → Action Group con correo.
 - [x] **D1** `ci.yml` en cada PR: `fmt -check -recursive`, `validate`, `checkov -d .` sin soft-fail.
-- [x] **D2** Cada `#checkov:skip` con justificación en línea (11 skips, tabla en `docs/INFORME-SOPORTE.md` §5).
+- [x] **D2** Cada `#checkov:skip` con justificación en línea (11 skips; tabla de riesgos aceptados en el informe, §6).
 - [x] **D3** cloud-init: escribe la app, el unit de systemd endurecido y la arranca; cero pasos manuales.
 
 ## 8. Acceso de soporte (sin SSH)
@@ -167,7 +167,7 @@ que ejecuta comandos con `az vmss run-command` (Entra ID + RBAC, auditado en el 
 
 ## 9. Pruebas y evidencias
 
-Ver **[docs/GUIA-PRUEBAS.md](docs/GUIA-PRUEBAS.md)**. Resumen:
+Resultados y análisis en **[docs/Informe-CaribeShop.pdf](docs/Informe-CaribeShop.pdf)** (§5).
 
 | Prueba | Script | Evidencia generada en `evidencias/` |
 |---|---|---|
@@ -179,8 +179,8 @@ Ver **[docs/GUIA-PRUEBAS.md](docs/GUIA-PRUEBAS.md)**. Resumen:
 
 ## 10. DevSecOps
 
-- Proteger `main`: *Settings → Branches → Add rule* → *Require status checks*: `terraform fmt + validate`, `checkov (bloqueante)`, `app + locustfile (sintaxis)`, `gitleaks (historial completo)`.
-- PR que falla a propósito y su corrección: **[docs/PR-DEMO.md](docs/PR-DEMO.md)**.
+- `main` protegida: los cuatro checks son obligatorios para hacer merge: `terraform fmt + validate`, `checkov (bloqueante)`, `app + locustfile (sintaxis)`, `gitleaks (historial completo)`.
+- PR #1 (abría SSH a Internet) bloqueado por Checkov `CKV_AZURE_10` y cerrado; PR #2 con la corrección (acceso de soporte sin SSH) aprobado por el pipeline.
 - Validación local equivalente al CI:
   ```bash
   terraform -chdir=infra fmt -check -recursive
