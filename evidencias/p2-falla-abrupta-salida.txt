@@ -20,4 +20,4 @@ instancias vistas (primera / �ltima respuesta):
   vmss-caribeshop-app000007 2026-11-23T20:28:35.613+00:00  ->  2026-11-23T20:31:37.924+00:00
   vmss-caribeshop-app000006 2026-11-23T20:28:37.908+00:00  ->  2026-11-23T20:28:37.908+00:00
   vmss-caribeshop-app000008 2026-11-23T20:30:35.515+00:00  ->  2026-11-23T20:31:39.710+00:00
-Tiempo de recuperación = segunda línea de C:/Users/Fundasaberes/Desktop/proyectos luis/session_claude/caribeshop-taller-integrador/evidencias/p2-falla-abrupta-tiempos.txt - 2026-11-23T20:28:35.081Z
+Tiempo de recuperación = segunda línea de ./evidencias/p2-falla-abrupta-tiempos.txt - 2026-11-23T20:28:35.081Z

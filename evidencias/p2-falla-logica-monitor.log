@@ -1,4 +1,4 @@
-monitoreando http://caribeshop-s8pup.centralus.cloudapp.azure.com -> C:/Users/Fundasaberes/Desktop/proyectos luis/session_claude/caribeshop-taller-integrador/evidencias/p2-falla-logica-monitor.csv (Ctrl+C para terminar)
+monitoreando http://caribeshop-s8pup.centralus.cloudapp.azure.com -> ./evidencias/p2-falla-logica-monitor.csv (Ctrl+C para terminar)
 2026-11-23T20:10:13.118+00:00 OK  200 vmss-caribeshop-app000003   297.7 ms 
 2026-11-23T20:10:13.916+00:00 OK  200 vmss-caribeshop-app000006   263.7 ms 
 2026-11-23T20:10:14.680+00:00 OK  200 vmss-caribeshop-app000003   291.8 ms 

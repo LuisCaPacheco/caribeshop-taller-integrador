@@ -6769,5 +6769,5 @@ Hora                          Operacion                       Estado     Descrip
 2026-11-23T19:28:19.3122979Z  Autoscale scale up initiated    Succeeded  The autoscale engine attempting to scale resource '/subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/Microsoft.Compute/virtualMachineScaleSets/vmss-caribeshop-app' from 2 instances count to 3 instances count.
 2026-11-23T19:28:19.3122979Z  Autoscale scale up initiated    Succeeded  The autoscale engine attempting to scale resource '/subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/Microsoft.Compute/virtualMachineScaleSets/vmss-caribeshop-app' from 2 instances count to 3 instances count.
 2026-11-23T19:28:19.3122979Z  Autoscale scale up completed    Succeeded  The autoscale operation to scale resource '/subscriptions/<SUSCRIPCION>/resourceGroups/rg-caribeshop-prod/providers/Microsoft.Compute/virtualMachineScaleSets/vmss-caribeshop-app' from 2 instances count to 3 instances count completed successfully.
-gráfico: C:/Users/Fundasaberes/Desktop/proyectos luis/session_claude/caribeshop-taller-integrador/evidencias/p1-escalonada.png
-Evidencias en C:/Users/Fundasaberes/Desktop/proyectos luis/session_claude/caribeshop-taller-integrador/evidencias
+gráfico: ./evidencias/p1-escalonada.png
+Evidencias en ./evidencias
