@@ -9,7 +9,7 @@ Con este CSV se mide:
   * cuándo se recupera la capacidad (reaparece un hostname nuevo)
 
 Uso:
-  python scripts/monitor.py http://<fqdn> evidencias/p2-falla-logica-monitor.csv [intervalo_s]
+  python scripts/monitor.py http://<fqdn> evidencias/p2-falla-logica-monitor.csv [intervalo_s] [duracion_max_s]
   python scripts/monitor.py --resumen evidencias/p2-falla-logica-monitor.csv [inicio_iso] [fin_iso]
 Ctrl+C para detener.  Solo librería estándar.
 """
@@ -33,13 +33,14 @@ def probe(url, timeout=3.0):
         return 0, "", (time.perf_counter() - t0) * 1000, type(e).__name__
 
 
-def run(url, out, interval):
+def run(url, out, interval, max_s=0):
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["ts_utc", "status", "instance", "latency_ms", "error"])
         print(f"monitoreando {url} -> {out} (Ctrl+C para terminar)")
+        t_end = time.time() + max_s if max_s else None
         try:
-            while True:
+            while t_end is None or time.time() < t_end:
                 ts = dt.datetime.now(dt.timezone.utc).isoformat(timespec="milliseconds")
                 status, inst, lat, err = probe(url)
                 w.writerow([ts, status, inst, f"{lat:.1f}", err])
@@ -81,7 +82,8 @@ if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "--resumen":
         summary(sys.argv[2], *(sys.argv[3:5]))
     elif len(sys.argv) >= 3:
-        run(sys.argv[1].rstrip("/"), sys.argv[2], float(sys.argv[3]) if len(sys.argv) > 3 else 0.5)
+        run(sys.argv[1].rstrip("/"), sys.argv[2], float(sys.argv[3]) if len(sys.argv) > 3 else 0.5,
+            float(sys.argv[4]) if len(sys.argv) > 4 else 0)
     else:
         print(__doc__)
         sys.exit(1)
